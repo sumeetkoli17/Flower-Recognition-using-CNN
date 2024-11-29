@@ -1,0 +1,8 @@
+tensorflow
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+flask
+#-e .

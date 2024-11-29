@@ -9,7 +9,7 @@ from tensorflow.keras.preprocessing.image import load_img , img_to_array
 
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = load_model(os.path.join(BASE_DIR , 'model.hdf5'))
+model = load_model(os.path.join(BASE_DIR , 'model.keras'))
 
 
 ALLOWED_EXT = set(['jpg' , 'jpeg' , 'png' , 'jfif'])
@@ -17,7 +17,7 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXT
 
-classes = ['daisy' ,'dandelion', 'rose' , 'sunflower' , 'tulip']
+classes = ['Daisy' ,'Dandelion', 'Rose' , 'Sunflower' , 'Tulip']
 
 
 def predict(filename , model):
@@ -43,6 +43,7 @@ def predict(filename , model):
     for i in range(3):
         prob_result.append((prob[i]*100).round(2))
         class_result.append(dict_result[prob[i]])
+        print(class_result)
 
     return class_result , prob_result
 
