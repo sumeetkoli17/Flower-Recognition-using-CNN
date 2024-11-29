@@ -1,4 +1,4 @@
-# Image Classification Model
+# Flower Recognition using CNN
 
 This repository contains an image classification project using a Convolutional Neural Network (CNN) to classify images into different categories. The model is built with TensorFlow and Keras and trained on a dataset of labeled images.
 
